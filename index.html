@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokémon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <img class="logo" src="assets/logo.png" alt="Pokémon">
+  </header>
+
+  <main class="container">
+    <form class="controls" id="controls" autocomplete="off">
+      <input type="search" id="search" placeholder="Search your pokemon" aria-label="Search your pokemon">
+      <select id="type" aria-label="Filter by type">
+        <option value="all">all</option>
+      </select>
+      <select id="sort" aria-label="Sort">
+        <option value="">sort</option>
+        <option value="num-asc">Number (low → high)</option>
+        <option value="num-desc">Number (high → low)</option>
+        <option value="name-asc">Name (A → Z)</option>
+        <option value="name-desc">Name (Z → A)</option>
+        <option value="weight-asc">Weight (light → heavy)</option>
+        <option value="weight-desc">Weight (heavy → light)</option>
+        <option value="time-asc">Spawn time (early → late)</option>
+        <option value="time-desc">Spawn time (late → early)</option>
+      </select>
+      <button type="submit" class="btn">Search</button>
+    </form>
+
+    <p id="count" class="count" aria-live="polite"></p>
+    <section id="cards" class="cards"></section>
+    <p id="empty" class="empty" hidden>No pokemon found.</p>
+  </main>
+
+  <script src="pokemons.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
